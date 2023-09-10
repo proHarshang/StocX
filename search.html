@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <!-- Bootstrap CSS -->
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet'
+        integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel='stylesheet' href='style.css'>
+    <title>Unsplace</title>
+</head>
+
+<body>
+    <div id="Searchpage_nav">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="logo">
+                <img style="height: 6.6rem; padding: 0.5rem;" src="wallpaper-logo.png" alt="Unsplace-logo">
+                <p>Unsplace</p>
+            </div>
+            <form class="d-flex justify-content-start my-3 nav-searchbar" action="search.html" method="get">
+                <input class="input-search" style="width:33vw" placeholder="Search" type="search" name="search"
+                    id="input-search">
+                <button type="submit" class="input-btn mx-2" value="submit">Search</button>
+            </form>
+            <i class="bi bi-list menu-icon-searchPage" onclick="openMenu()"></i>
+            <!-- <div class="nav-links">
+                <ul type="none" style="font-size:large" class="d-flex text-white">
+                    <li class="mx-4">Services</li>
+                    <li class="mx-4">Join Us</li>
+                    <li class="mx-4">About Us</li>
+                    <li class="mx-4">Contact Us</li>
+                </ul>
+            </div> -->
+        </div>
+        <span id="search_text" class="container"></span>
+    </div>
+    <!-- nav popup for smaller devices -->
+    <div class="container-fluid text-light p-5" id="nav-menu">
+        <div class="d-flex justify-content-between mb-4">
+            <span class="h4">Menu</span>
+            <i class="bi bi-x" onclick="closeMenu()" style="font-size:xxx-large"></i>
+        </div>
+        <div class="list">
+            <ul type="none" style="font-size:x-large; line-height: 3;"
+                class="d-flex flex-column align-items-center text-white">
+                <li>
+                    <form class="d-flex align-items-center justify-content-start my-3" style="height: 5rem;" action="search.html" method="get">
+                        <input class="input-search" style="height: 5rem; width: 45rem;" placeholder="Search" type="search" name="search"
+                            id="input-search">
+                        <input type="submit" class="input-btn mx-4" value="Search">
+                    </form>
+                </li>
+                <li class="mx-4">Services</li>
+                <li class="mx-4">Join Us</li>
+                <li class="mx-4">About Us</li>
+                <li class="mx-4">Contact Us</li>
+            </ul>
+        </div>
+    </div>
+    <section class="container gallary my-5"></section>
+    <!-- popup -->
+    <div id="popup" class="popup">
+        <div class="d-flex flex-row justify-content-between align-items-center my-2">
+            <div>
+                <button class="download_btn"><i class="bi bi-download"></i> <span id="downloads_count">
+                        Download</span></button>
+                <button id="likes"><i class="bi bi-heart-fill" style="color:red"></i> <span
+                        id="likes_count"></span></button>
+            </div>
+            <div id="close_popup_btn" onclick="ClosePopup()" style="cursor:pointer;"><i class="bi bi-x-square-fill"></i>
+            </div>
+        </div>
+        <div class="popup_img text-center mt-4 d-flex align-items-center justify-content-around">
+            <button><i class="bi bi-caret-left"></i></button>
+            <img id="popup_img_tag" class="img-fluid" alt="img">
+            <button><i class="bi bi-caret-right"></i></button>
+        </div>
+        <span id="credit"></span>
+    </div>
+    <!-- fixed btn -->
+    <a href="#nav"><i class="bi bi-arrow-up-circle-fill top-arrow"></i></a>
+
+    <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js'
+        integrity='sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4'
+        crossorigin='anonymous'></script>
+    <script src='script.js'></script>
+</body>
+
+</html>
